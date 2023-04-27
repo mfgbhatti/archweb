@@ -17,17 +17,17 @@
 </head>
 <body class="{% if user.is_authenticated %}devmode {% endif %}{% block bodyclass %}{% endblock %}">
     <div id="archnavbar" class="{% block navbarclass %}anb-home{% endblock %}">
-        <div id="archnavbarlogo"><h1><a href="/" title="Return to the main page">Arch Linux</a></h1></div>
+        <div id="archnavbarlogo"><h1><a href="/" title="مرکزی صفحہ پر واپس جائیں">آرچ لینکس</a></h1></div>
         <div id="archnavbarmenu">
             <ul id="archnavbarlist">
-                <li id="anb-home"><a href="/" title="Arch news, packages, projects and more">Home</a></li>
-                <li id="anb-packages"><a href="/packages/" title="Arch Package Database">Packages</a></li>
-                <li id="anb-forums"><a href="https://bbs.archlinux.org/" title="Community forums">Forums</a></li>
-                <li id="anb-wiki"><a href="https://wiki.archlinux.org/" title="Community documentation">Wiki</a></li>
-                <li id="anb-gitlab"><a href="https://gitlab.archlinux.org/archlinux" title="GitLab">GitLab</a></li>
-                <li id="anb-security"><a href="https://security.archlinux.org/" title="Arch Linux Security Tracker">Security</a></li>
-                <li id="anb-aur"><a href="https://aur.archlinux.org/" title="Arch Linux User Repository">AUR</a></li>
-                <li id="anb-download"><a href="{% url 'page-download' as pdl %}{{ pdl }}" title="Get Arch Linux">Download</a></li>
+                <li id="anb-home"><a href="/" title="تازہ خبریں، پیکجز، منصوبے اور بہت کچھ">ہوم</a></li>
+                <li id="anb-packages"><a href="/packages/" title="آرچ کے پیکجز کی ڈیٹا بیس">پیکجز</a></li>
+                <li id="anb-forums"><a href="https://bbs.archlinux.org/" title="کمیونٹی فورمز">فورمز</a></li>
+                <li id="anb-wiki"><a href="https://wiki.archlinux.org/" title="کمیونٹی دستاویزات">وکی</a></li>
+                <li id="anb-gitlab"><a href="https://gitlab.archlinux.org/archlinux" title="گٹ لیب">گٹ لیب</a></li>
+                <li id="anb-security"><a href="https://security.archlinux.org/" title="آرچ لینکس کی سیکورٹی ٹریکنگ">سیکورٹی</a></li>
+                <li id="anb-aur"><a href="https://aur.archlinux.org/" title="آرچ لینکس کے صارف کی ریپوزیٹری">اے یو آر</a></li>
+                <li id="anb-download"><a href="{% url 'page-download' as pdl %}{{ pdl }}" title="آرچ لینکس کو ڈاون لوڈ کریں">ڈاون لوڈ</a></li>
             </ul>
         </div>
     </div>
@@ -77,17 +77,19 @@
             </div>
         {% endblock %}
         <div id="footer">
-            <p>Copyright © 2002-{% now "Y" %} <a href="mailto:jvinet@zeroflux.org"
-                title="Contact Judd Vinet">Judd Vinet</a>, <a href="mailto:aaron@archlinux.org"
-                title="Contact Aaron Griffin">Aaron Griffin</a> and
-                <a href="mailto:anthraxx@archlinux.org" title="Contact Levente Polyák">Levente Polyák</a>.</p>
+            <p>2002-{% now "Y" %} © <a href="mailto:jvinet@zeroflux.org"
+                title="جیوڈ وینٹ سے رابطہ">جیوڈ وینٹ</a>، <a href="mailto:aaron@archlinux.org"
+                title="آرون گریفن سے رابطہ">آرون گریفن</a> اور
+                <a href="mailto:anthraxx@archlinux.org" title="لیونٹ پولیک سے رابطہ">لیونٹ پولیک</a> ۔ کاپی رائتس</p>
 
-            <p>The Arch Linux name and logo are recognized
+            <p>آرچ لینکس کا نام اور لوگو تسلیم شدہ
             <a href="https://terms.archlinux.org/docs/trademark-policy/"
-                title="Arch Linux Trademark Policy">trademarks</a>. Some rights reserved.</p>
+                title="آرچ لینکس کی ٹریڈمارک پولیسی">ٹریڈ مارکس</a> ہیں۔ کچھ حقوق محفوظ ہیں۔</p>
 
-            <p>The registered trademark Linux® is used pursuant to a sublicense from LMI,
-            the exclusive licensee of Linus Torvalds, owner of the mark on a world-wide basis.</p>
+            <p>رجسٹرڈ ٹریڈ مارک کا استعمال جو کہ لائینس ٹوروالڈز کے خصوصی لائسنس یافتہ، عالمی سطح پر اس نشان کے مالک ہیں ال ایم آئی کے ذیلی لائسنس کے تحت کیا جاتا ہے۔
+
+              <span>Linux®</span>
+            </p>
         </div>
     </div>
     <script type="application/ld+json">

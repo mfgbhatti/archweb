@@ -264,11 +264,6 @@ h5 {
     text-align: right;
 }
 
-#content-left p {
-    /* text-align: right; */
-    direction: rtl;
-}
-
 #content-right {
     float: left;
     width: 300px;
@@ -518,10 +513,10 @@ table thead th.sorter-false {
     margin-top: 1.5em;
 }
 
-#news h3 {
-    float: right;
-    padding-bottom: .5em
-}
+    #news h3 {
+        float: right;
+        padding-bottom: .5em
+    }
 
 #news div {
     margin-bottom: 1em;
@@ -535,10 +530,10 @@ table thead th.sorter-false {
     font-weight: normal;
 }
 
-#news .rss-icon {
-    float: left;
-    margin-top: 1em;
-}
+    #news .rss-icon {
+        float: left;
+        margin-top: 1em;
+    }
 
 #news h4 {
     clear: both;
@@ -654,20 +649,20 @@ h3 span.arrow {
     border: 1px solid #08b;
 }
 
-#pkgsearch label {
-    width: auto;
-    padding: 0.1em 0;
-    float: right;
-}
+    #pkgsearch label {
+        width: auto;
+        padding: 0.1em 0;
+        float: right;
+    }
 
-#pkgsearch input {
-    width: 10em;
-    float: left;
-    font-size: 1em;
-    color: #000;
-    background: #fff;
-    border: 1px solid #09c;
-}
+    #pkgsearch input {
+        width: 13em;
+        /* float: right; */
+        font-size: 1em;
+        color: #000;
+        background: #fff;
+        border: 1px solid #09c;
+    }
 
 .pkgsearch-typeahead {
     position: absolute;
@@ -705,11 +700,10 @@ h3 span.arrow {
     font-weight: normal;
 }
 
-#pkg-updates .rss-icon {
-    float: left;
-    /* margin: -2em 0 0 0; */
-    /* float left */
-}
+    #pkg-updates .rss-icon {
+        float: left;
+        /* margin: -2em 0 0 0; */ /* float left */
+    }
 
 #pkg-updates table {
     margin: 0;
@@ -737,11 +731,9 @@ h3 span.arrow {
 #nav-sidebar {
     text-align: right;
 }
-
 #nav-sidebar ul {
     list-style: none;
-    margin: 0 0.5em 0.5em 1em;
-    /* margin on right */
+    margin: 0 0.5em 0.5em 1em; /* margin on right */
     padding: 0;
 }
 

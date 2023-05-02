@@ -12,33 +12,29 @@
 {% block content_left %}
 {% cache 62 main-page-left %}
 <div id="intro" class="box">
-    <h2>A simple, lightweight distribution</h2>
+    <h2>ایک سادہ، ہلکا پھلکا سسٹم</h2>
 
-    <p>You've reached the website for <strong>Arch Linux</strong>, a
-    lightweight and flexible Linux® distribution that tries to Keep It
-    Simple.</p>
+    <p> آپ <strong>آرچ لینکس </strong>کے لیے ویب سائٹ پر پہنچ گئے ہیں۔  </p>
 
-    <p>Currently we have official packages optimized for the x86-64
-    architecture. We complement our official package sets with a
-    <a href="https://aur.archlinux.org/" title="Arch User Repository (AUR)">
-        community-operated package repository</a> that grows in size and
-    quality each and every day.</p>
+    <p>آرکیٹکچر کے لیے موزوں آفیشل پیکجز ہیں۔ ہم اپنے آفیشل پیکج سیٹس کو
+      <a href="https://aur.archlinux.org/" title="آرچ یوزر ریپوزٹری (اے یو آر)">
+      کمیونٹی کے زیرِانتظام پیکیج ریپوزٹری</a>  کے ساتھ منتظم کرتے ہیں جو ہر روز سائز اور معیار میں بڑھتا ہے۔ x86-64 فی الحال ہمارے پاس
+    </p>
 
-    <p>Our strong community is diverse and helpful, and we pride ourselves
-    on the range of skillsets and uses for Arch that stem from it. Please
-    check out our <a href="https://bbs.archlinux.org/" title="Arch Forums">forums</a>
-    and <a href="https://lists.archlinux.org/" title="Arch Mailing Lists">mailing lists</a>
-    to get your feet wet. Also glance through our <a href="https://wiki.archlinux.org/"
-        title="Arch Wiki">wiki</a>
-    if you want to learn more about Arch.</p>
+    <p>ہماری مضبوط کمیونٹی متنوع اور مددگار ہے، اور ہمیں اس سے حاصل ہونے والی مہارتوں اور آرچ کے استعمال پر فخر ہے۔
+      براہ کرم ہمارے <a href="https://bbs.archlinux.org/" title="آرچ فورمز">فورم</a>
+    اور <a href="https://lists.archlinux.org/" title="آرچ میلنگ لسٹس">میلنگ لسٹس</a>
+    کو دیکھیں اور  <a href="https://wiki.archlinux.org/"
+        title="آرچ وِکی">وِکی</a>
+    آپ کی مدد کیلیے موجود ہے۔</p>
 
     <p class="readmore"><a href="{% url 'page-about' %}"
-        title="Learn more about Arch Linux">Learn more...</a></p>
+        title="Learn more about Arch Linux">مزید جانیں۔۔۔</a></p>
 </div>
 
 <div id="news">
     <h3>
-        <a href="{% url 'news-list' %}" title="Browse the news archives">Latest News</a>
+        <a href="{% url 'news-list' %}" title="Browse the news archives">تازہ خبریں</a>
         <span class="arrow"></span>
     </h3>
 
@@ -79,18 +75,17 @@
 <div id="pkgsearch" class="widget">
     <form id="pkgsearch-form" method="get" action="/packages/">
         <fieldset>
-            <label for="pkgsearch-field">Package Search:</label>
-            <input id="pkgsearch-field" type="text" name="q" size="18" maxlength="200" autocomplete="off" />
+          <input id="pkgsearch-field" type="text" name="q" size="18" maxlength="200" autocomplete="off" />
+          <label for="pkgsearch-field">: پیکیج کی تلاش</label>
         </fieldset>
     </form>
 </div>
 
 <div id="pkg-updates" class="widget box">
-    <h3>Recent Updates <span class="more">(<a href="/packages/?sort=-last_update"
-            title="Browse all of the latest packages">more</a>)</span></h3>
-
-    <a href="/feeds/packages/" title="Arch Package Updates RSS Feed"
-        class="rss-icon"><img src="{% static "rss.svg" %}" alt="RSS Feed" /></a>
+    <a href="/feeds/packages/" title="آرچ پیکجز کی اپڈیٹس کا آر اس اس فیڈ"
+        class="rss-icon"><img src="{% static "rss.svg" %}" alt="آر اس اس فیڈ" /></a>
+    <h3>حالیہ اپڈیٹس<span class="more">(<a href="/packages/?sort=-last_update"
+            title="تازہ پیکجز کو براوز کریں">مزید</a>)</span></h3>
 
     <table>
         {% for update in pkg_updates %}
@@ -98,7 +93,7 @@
             <td class="pkg-name"><span class="{{ update.classes|join:' ' }}">{{ update.pkgbase }} {{ update.version }}</span></td>
             <td class="pkg-arch">
                 {% for pkg in update.package_links %}<a href="{{ pkg.get_absolute_url }}"
-                    title="Details for {{ pkg.pkgname }} [{{ pkg.repo|lower }}]">{{ pkg.arch }}</a>{% if not forloop.last %}/{% endif %}{% endfor %}
+                    title="کی مزید تفصیلات {{ pkg.pkgname }} [{{ pkg.repo|lower }}]">{{ pkg.arch }}</a>{% if not forloop.last %}/{% endif %}{% endfor %}
             </td>
         </tr>
         {% endfor %}
@@ -108,113 +103,114 @@
 
 {% cache 115 main-page-right %}
 <div id="nav-sidebar" class="widget">
-    <h4>Documentation</h4>
+    <h4>دستاویزات</h4>
     <ul>
         <li><a href="https://wiki.archlinux.org/"
-            title="Community documentation">Wiki</a></li>
+            title="کیمیونیٹی دستاویزات">وکی</a></li>
         <li><a href="https://man.archlinux.org/"
-            title="All manpages from Arch packages">Manual Pages</a></li>
+            title="آرچ پیکجز کے تمام امدادی صفحات">دستی صفحات</a></li>
         <li><a href="https://wiki.archlinux.org/title/Installation_guide"
-            title="Installation guide">Installation Guide</a></li>
+            title="انسٹالیشن کی رہنمائی">انسٹالیشن کی رہنمائی</a></li>
     </ul>
 
-    <h4>Community</h4>
+    <h4>کیمیونیٹی</h4>
     <ul>
         <li><a href="https://lists.archlinux.org/"
-            title="Community and developer mailing lists">Mailing Lists</a></li>
+            title="کیمیونیٹی اور ڈیویلپرز کی میلنگ لسٹس">میلنگ لسٹس</a></li>
         <li><a href="https://wiki.archlinux.org/title/IRC_channels"
-            title="Official and regional IRC communities">IRC Channels</a></li>
+            title="آفیشل اور علاقائی کیمیونیٹیز کے چینلز">آئی آر سی چینلز</a></li>
         <li><a href="https://planet.archlinux.org/"
-            title="Arch in the blogosphere">Planet Arch</a></li>
+            title="آرچ بلاگ سفیئر میں">آرچ پلانٹ</a></li>
         <li><a href="https://wiki.archlinux.org/title/International_communities"
-            title="Arch communities in your native language">International Communities</a></li>
+            title="آرچ کیمیونیٹیز آپکی علاقائی زبانوں میں">بین الاقوامی کیمیونیٹیز</a></li>
     </ul>
 
-    <h4>Support</h4>
+    <h4>حمایت</h4>
     <ul>
-        <li><a href="{% url 'page-donate' %}" title="Help support Arch Linux">Donate</a></li>
-        <li><a href="https://www.unixstickers.com/tag/archlinux" title="Arch
-	Linux stickers, t-shirts, hoodies, mugs, posters and pins">Products via Unixstickers</a></li>
+        <li><a href="{% url 'page-donate' %}" title="آرچ لینکس کو سپورٹ کریں">عطیہ کریں</a></li>
+        <li><a href="https://www.unixstickers.com/tag/archlinux" title="آرچ لینکس کے سٹیکرز، ٹی شرٹس، ہوڈیز، مگز، پوسٹرز اور پنز">یونی سٹیکرز سے اشیاء خریدیں</a></li>
         <li><a href="https://www.freewear.org/?page=list_items&amp;org=Archlinux"
-            title="T-shirts">T-shirts via Freewear</a></li>
+            title="ٹی شرٹس">فری وئیرز سے ٹی شرٹس،</a></li>
         <li><a href="https://www.hellotux.com/arch"
-            title="T-shirts">T-shirts via HELLOTUX</a></li>
+            title="ٹی شرٹس">ہولوٹکس سے ٹی شرٹس</a></li>
     </ul>
 
-    <h4>Tools</h4>
+    <h4>اوزار</h4>
     <ul>
         <li><a href="{% url 'mirrorlist' %}"
-            title="Get a custom mirrorlist from our database">Mirrorlist Updater</a></li>
+            title="ہمارے ڈیٹا بیس سے مخلط مرِر لسٹ حاصل کریں">مرِر لسٹ اپڈیٹر</a></li>
         <li><a href="{% url 'mirror-list' %}"
-            title="See a listing of all available mirrors">Mirror List</a></li>
+            title="تمام دستیاب مرِرز کی فہرست">مرِر لسٹ</a></li>
         <li><a href="{% url 'mirror-status' %}"
-            title="Check the status of all known mirrors">Mirror Status</a></li>
+            title="موجودہ تمام مرِرز کی حالت چیک کریں">مرِر کی حالت</a></li>
     </ul>
 
-    <h4>Development</h4>
+    <h4>ڈیویلپمنٹ</h4>
     <ul>
         <li><a href="https://wiki.archlinux.org/title/Getting_involved"
-            title="Getting involved">Getting involved</a></li>
+            title="شامل ہوں">شامل ہوں</a></li>
         <li><a href="https://gitlab.archlinux.org/archlinux/"
-            title="Official Arch projects (git)">Projects in Git</a></li>
+            title="(گِٹ)گٹ میں پروجکٹس">گِٹ میں پروجکٹس</a></li>
+        <li><a href="{% url 'page-svn' %}"
+            title="پیکجز کیلیے ایس وی این اندراجات دیکھیں">ایس وی این ریپوزیٹریز</a></li>
         <li><a href="https://wiki.archlinux.org/title/DeveloperWiki"
-            title="Developer Wiki articles">Developer Wiki</a></li>
+            title="ڈیویلپر وکِی آرٹیکل">ڈیویلپر وکِی</a></li>
         <li><a href="/groups/"
-            title="View the available package groups">Package Groups</a></li>
+            title="دستیاب پیکیج گروُپ دیکھیں">پیکیج گروُپ</a></li>
         <li><a href="/todo/"
-            title="Developer Todo Lists">Todo Lists</a></li>
+            title="ڈیویلپر ٹوڈو فہرستیں">ٹوڈو فہرستیں</a></li>
         <li><a href="{% url 'releng-release-list' %}"
-            title="Release Engineering ISO listing">ISO Release List</a></li>
+            title="انجینئرنگ آئی ایس او کی فہرست جاری کریں">آئی ایس او ریلیز کی فہرست</a></li>
         <li><a href="{% url 'visualize-index' %}"
-            title="View visualizations">Visualizations</a></li>
+            title="تصورات دیکھیں">تصورات</a></li>
         <li><a href="{% url 'packages-differences' %}"
-            title="See differences in packages between available architectures">Differences Reports</a></li>
+            title="دستیاب آرکیٹیکچرز کے درمیان پیکجوں میں فرق دیکھیں">اختلافات کی رپورٹس</a></li>
     </ul>
 
-    <h4>People</h4>
+    <!-- <h4>لوگ</h4>
     <ul>
         {% for group in staff_groups %}
         <li><a href="{% url 'people' group.slug %}" title="More info about {{ group.name }}">{{ group.name }}</a></li>
-        {% endfor %}
+        {% endfor %}People
         <li><a href="{% url 'page-keys' %}"
             title="Package/Database signing master keys">Signing Master Keys</a></li>
-    </ul>
+    </ul> -->
 
-    <h4>More Resources</h4>
+    <h4>مزید وسائل</h4>
     <ul>
         <li><a href="https://wiki.archlinux.org/title/Arch_Linux_press_coverage"
-            title="Arch Linux in the media">Press Coverage</a></li>
-        <li><a href="{% url 'page-art' %}" title="Arch logos and other artwork for promotional use">Logos &amp; Artwork</a></li>
-        <li><a href="{% url 'news-list' %}" title="News Archives">News Archives</a></li>
-        <li><a href="/feeds/" title="Various RSS Feeds">RSS Feeds</a></li>
+            title="میڈیا میں آرچ لینکس">پریس کوریج</a></li>
+        <li><a href="{% url 'page-art' %}" title="پروموشنل استعمال کے لیے آرچ لوگو اور دیگر آرٹ ورک">لوگو اور آرٹ ورک</a></li>
+        <li><a href="{% url 'news-list' %}" title="نیوز آرکائیوز">نیوز آرکائیوز</a></li>
+        <li><a href="/feeds/" title="مختلف آر ایس ایس فیڈز">مآر ایس ایس فیڈز</a></li>
     </ul>
 </div>
 
 <div id="home-donate-button" class="widget">
     <a href="https://co.clickandpledge.com/Default.aspx?WID=47294">
-        <img src="{% static "click_and_pledge.png" %}" alt="Donate via Click&amp;Pledge to Arch Linux" title="Donate via Click&amp;Pledge to Arch Linux"/>
+        <img src="{% static "click_and_pledge.png" %}" alt="آرچ لینکس کو کلک اینڈ پلج کے ذریعے عطیہ کریں" title="آرچ لینکس کو کلک اینڈ پلج کے ذریعے عطیہ کریں"/>
     </a>
-</div>
+<!-- </div>
 
-<div class="widget">
-    <a href="https://www.hetzner.com" title="Dedicated Root Server, VPS &amp; Hosting - Hetzner Online GmbH">
+<div class="widget"> -->
+    <a href="https://www.hetzner.com">
         <img src="{% static "hetzner_logo.png" %}"
-            title="" alt="Hetzner logo"/>
+        title="وقف روٹ سرور، وی پی ایس اور ہوسٹنگ کیلیے ہیٹزنر آن لائن جی ایم بی ایچ" alt="ہیٹزنر لوگو"/>
     </a>
 
-    <a href="https://www.privateinternetaccess.com/" title="Private Internet Access">
+    <a href="https://www.privateinternetaccess.com/">
         <img src="{% static "pia_button.png" %}"
-￼            title="" alt="Private Internet Access logo"/>
+￼            title="پرائیویٹ انٹرنٹ اکسس" alt="پرائیویٹ انٹرنٹ اکسس لوگو"/>
     </a>
 
-    <a href="https://icons8.com/" title="Icons8">
+    <a href="https://icons8.com/">
         <img src="{% static "icons8_logo.png" %}"
-            title="" alt="Icons8 logo"/>
+        title="آئیکن8" alt="آئیکن8"/>
     </a>
 
-    <a href="https://www.shells.com" title="Shells.com">
+    <a href="https://www.shells.com">
         <img src="{% static "shells_logo.png" %}"
-            title="" alt="Shells logo"/>
+            title="شلز لوگو" alt="شلز لوگو"/>
     </a>
 </div>
 {% endcache %}

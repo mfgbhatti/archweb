@@ -193,6 +193,7 @@ h5 {
 
 #content-left {
     margin: 0 340px 0 0;
+    text-align: right;
 }
 
 #content-right {
@@ -431,7 +432,7 @@ table thead th.sorter-false {
 }
 
     #news h3 {
-        float: left;
+        float: right;
         padding-bottom: .5em
     }
 
@@ -448,7 +449,7 @@ table thead th.sorter-false {
     }
 
     #news .rss-icon {
-        float: right;
+        float: left;
         margin-top: 1em;
     }
 
@@ -569,11 +570,12 @@ h3 span.arrow {
     #pkgsearch label {
         width: auto;
         padding: 0.1em 0;
+        float: right;
     }
 
     #pkgsearch input {
-        width: 10em;
-        float: right;
+        width: 13em;
+        /* float: right; */
         font-size: 1em;
         color: #000;
         background: #fff;
@@ -609,6 +611,7 @@ h3 span.arrow {
 /* home: recent pkg updates */
 #pkg-updates h3 {
     margin: 0 0 0.3em;
+    text-align: right;
 }
 
     #pkg-updates .more {
@@ -616,8 +619,8 @@ h3 span.arrow {
     }
 
     #pkg-updates .rss-icon {
-        float: right;
-        margin: -2em 0 0 0;
+        float: left;
+        /* margin: -2em 0 0 0; */ /* float left */
     }
 
     #pkg-updates table {
@@ -642,15 +645,19 @@ h3 span.arrow {
     }
 
 /* home: sidebar navigation */
+#nav-sidebar {
+    text-align: right;
+}
 #nav-sidebar ul {
     list-style: none;
-    margin: 0.5em 0 0.5em 1em;
+    margin: 0 0.5em 0.5em 1em; /* margin on right */
     padding: 0;
 }
 
 /* home: sidebar components (navlist, sponsors, pkgsearch, etc) */
 div.widget {
     margin-bottom: 1.5em;
+    text-align: right;
 }
 
 /* feeds page */

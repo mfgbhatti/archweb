@@ -710,6 +710,7 @@ h3 span.arrow {
 
 #pkg-updates table {
     margin: 0;
+    direction: ltr;
 }
 
 #pkg-updates td.pkg-name {

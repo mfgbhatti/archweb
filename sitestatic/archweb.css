@@ -19,6 +19,10 @@
     unicode-range: U+0600-06FF, U+0750-077F, U+FB50-FDFF, U+FE70-FEFF;
 }
 
+:root {
+    font-size: 16px;
+}
+
 /* container for the entire bar */
 #archnavbar {
     min-height: 40px !important;
@@ -76,9 +80,9 @@
 
 #archnavbarlist li {
     display: inline-block !important;
-    font-size: 14px !important;
+    font-size: 16px !important;
     font-family: JameelNooriNastaliq, sans-serif !important;
-    line-height: 14px !important;
+    line-height: 16px !important;
     padding: 14px 15px 0px !important;
 }
 
@@ -108,7 +112,7 @@ body {
     min-width: 650px;
     background: #f6f9fc;
     color: #222;
-    font: normal 1.4em JameelNooriNastaliq, sans-serif;
+    font: normal 120% JameelNooriNastaliq, sans-serif;
     text-align: center;
 }
 
@@ -255,6 +259,11 @@ h5 {
 #content-left {
     margin: 0 340px 0 0;
     text-align: right;
+}
+
+#content-left p {
+    /* text-align: right; */
+    direction: rtl;
 }
 
 #content-right {

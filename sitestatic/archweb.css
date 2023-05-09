@@ -272,11 +272,20 @@ h5 {
     margin-left: -300px;
 }
 
-div.box {
+.box {
     margin-bottom: 1.5em;
     padding: 0.65em;
     background: #ecf2f5;
     border: 1px solid #bcd;
+    direction: rtl;
+}
+
+.box h2 {
+    text-align: right;
+}
+
+.box p {
+    text-align: right;
 }
 
 #footer {
@@ -696,6 +705,7 @@ h3 span.arrow {
 
 #pkg-updates table {
     margin: 0;
+    direction: ltr;
 }
 
 #pkg-updates td.pkg-name {

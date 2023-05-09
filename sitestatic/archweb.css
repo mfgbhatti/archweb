@@ -16,6 +16,7 @@
     src: local('JameelNooriNastaliq'), url(./fonts/JameelNooriNastaliq.ttf) format("truetype");
     font-style: normal;
     font-weight: normal;
+    unicode-range: U+0600-06FF, U+0750-077F, U+FB50-FDFF, U+FE70-FEFF;
 }
 
 /* container for the entire bar */

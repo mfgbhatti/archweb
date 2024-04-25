@@ -196,5 +196,27 @@
         <p>If you want to become an Official Arch Linux Mirror please follow the
             instructions listed <a href="https://wiki.archlinux.org/title/DeveloperWiki:NewMirrors">here</a>.</p>
 
+<<<<<<< HEAD
+=======
+        {% cache 600 download-mirrors %}
+            <div id="download-mirrors">
+                {% regroup mirror_urls by country as grouped_urls %}
+                {% for country in grouped_urls %}
+                    {% if country.grouper %}<h5>{% country_flag country.grouper %}{{ country.grouper.name }}</h5>
+                    {% else %}<h5>Worldwide</h5>{% endif %}
+                    <ul>
+                        {% for mirror_url in country.list %}
+                            <li><a href="{{ mirror_url.url }}{{ release.dir_path }}"
+                                   title="Download from {{ mirror_url.url }}">{{ mirror_url.mirror.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% endfor %}
+            </div>
+        {% endcache %}
+
+        <p>If you want to become an Official Arch Linux Mirror please follow the
+            instructions listed <a href="https://wiki.archlinux.org/title/DeveloperWiki:NewMirrors">here</a>.</p>
+
+>>>>>>> ad51a10c (updated download)
     </div>
 {% endblock %}

@@ -62,7 +62,7 @@
         <dt>{{ news.postdate|date }}</dt>
         <dd>
             <a href="{{ news.get_absolute_url }}"
-                title="View full article: {{ news.title }}">{{ news.title }}</a>
+                title="نیوز کا پورا مضمون: {{ news.title }}">{{ news.title }}</a>
         </dd>
     {% if forloop.last %}</dl>{% endif %}
     {% endif %}{% endfor %}

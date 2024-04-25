@@ -5,13 +5,24 @@
 
 {% block content %}
 <div id="dev-login" class="box">
-    <h2>Developer Login</h2>
+    <h2>ڈولپر لوگن</h2>
 
     <form id="dev-login-form" method="post">{% csrf_token %}
         <fieldset>
-            <legend>Please enter your credentials to login.</legend>
-            {{ form.as_p }}
-            <p><label></label><input type="submit" value="Login"/></p>
+            <legend>براہ مہربانی اپنی اسناد درج کریں۔</legend>
+            {% comment %} {{ form.as_p }} {% endcomment %}
+            {{ form.non_field_errors }}
+            <div class="fieldWrapper">
+                {{ form.username.errors }}
+                <label for="{{ form.username.id_for_label }}">صارف کا نام</label>
+                {{ form.username }}
+            </div>
+            <div class="fieldWrapper">
+                {{ form.password.errors }}
+                <label for="{{ form.password.id_for_label }}">پاس ورڈ</label>
+                {{ form.password }}
+            </div>
+            <p><label></label><input type="submit" value="لوگن کریں"/></p>
         </fieldset>
     </form>
 </div>

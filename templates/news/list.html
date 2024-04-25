@@ -9,11 +9,11 @@
 {% block content %}
 <div id="news-article-list" class="box">
 
-    <h2>Arch Linux News Archives</h2>
+    <h2>آرچ لینکس نیوز آرکاؤ</h2>
 
     {% if perms.news.add_news %}
     <ul class="admin-actions">
-        <li><a href="/news/add/" title="Add a news item">Add News Item</a></li>
+        <li><a href="/news/add/" titlDjango Admine="Add a news item">نیوز شامل کریں</a></li>
     </ul>
     {% endif %}
 
@@ -22,9 +22,9 @@
     <table id="article-list" class="results">
         <thead>
             <tr>
-                <th>Published</th>
-                <th>Title</th>
-                <th>Author</th>
+                <th>تاریخ</th>
+                <th>ٹائیٹل</th>
+                <th>لکھاری</th>
                 {% if perms.news.change_news %}
                 <th></th>
                 {% endif %}
@@ -33,18 +33,18 @@
         <tbody>
             {% for item in news_list %}
             <tr>
-                <td>{{ item.postdate|date }}</td>
                 <td class="wrap"><a href="{{ item.get_absolute_url }}"
-                        title="View: {{ item.title }}">{{ item.title }}</a></td>
+                    title="View: {{ item.title }}">{{ item.title }}</a></td>
                 <td>{{ item.author.get_full_name }}</td>
-                {% if perms.news.change_news %}
+                    {% if perms.news.change_news %}
+                <td>{{ item.postdate|date }}</td>
                 <td>
                     <a href="{{ item.get_absolute_url }}edit/"
-                        title="Edit: {{ item.title }}">Edit</a>
+                        title="Edit: {{ item.title }}">مرتب کریں</a>
                     {% endif %}
                     {% if perms.news.delete_news %}
                     &nbsp;&nbsp;<a href="{{ item.get_absolute_url }}delete/"
-                        title="Delete: {{ item.title }}">Delete</a>
+                        title="Delete: {{ item.title }}">ڈیلیٹ</a>
                 </td>
                 {% endif %}
             </tr>

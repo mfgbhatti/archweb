@@ -399,6 +399,11 @@ fieldset {
     border: 0;
 }
 
+.fieldWrapper {
+    padding-bottom: 10px;
+}
+
+
 label {
     width: 12em;
     vertical-align: top;
@@ -543,7 +548,7 @@ table thead th.sorter-false {
 }
 
 #news .timestamp {
-    float: right;
+    float: left;
     font-size: 0.85em;
     margin: -1.8em 0.5em 0 0;
 }
@@ -1169,7 +1174,7 @@ table.dash-stats .key {
 
 /* dev dashboard: admin actions (add news items, todo list, etc) */
 ul.admin-actions {
-    float: right;
+    float: left;
     list-style: none;
     margin-top: -2.5em;
 }

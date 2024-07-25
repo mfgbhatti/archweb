@@ -9,7 +9,7 @@ COPY requirements_prod.txt .
 RUN apt update && \
     apt install -y \
     vim \
-    memcached \
+    memcached && \
     pip install --no-cache-dir -r requirements_prod.txt
 
 COPY . .

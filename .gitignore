@@ -9,6 +9,7 @@ database.db
 tags
 collected_static/
 testing/
+venv/
 env/
 htmlcov
 **/**.tar.gz

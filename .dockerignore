@@ -1,0 +1,5 @@
+.venv/
+env/
+collected_static/
+.idea/
+.github/

@@ -14,8 +14,9 @@ RUN apt update && \
 
 COPY . .
 
-CMD ["memcached", "-u", "memcached", "-m", "64", "-c", "1024", "-l", "127.0.0.1,::1", "-o", "modern,drop_privileges"]
+ENTRYPOINT ["memcached", "-u", "memcached", "-m", "64", "-c", "1024", "-l", "127.0.0.1,::1", "-o", "modern,drop_privileges"]
 
 EXPOSE 8000
 
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+

@@ -6,6 +6,8 @@ COPY requirements.txt .
 
 COPY requirements_prod.txt .
 
+COPY migrate_and_collectstatic.sh .
+
 RUN apt update && \
     apt install -y \
     vim \

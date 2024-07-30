@@ -14,10 +14,12 @@ RUN apt update && \
 
 COPY . .
 
-CMD migrate_and_collectstatic.sh
+RUN chmod +x migrate_and_collectstatic.sh
+
+RUN migrate_and_collectstatic.sh
 
 EXPOSE 8000
 
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
 
-ENTRYPOINT ["memcached", "-u", "root", "-m", "64", "-c", "1024", "-l", "127.0.0.1,::1", "-o", "modern,drop_privileges"]
+# ENTRYPOINT ["memcached", "-u", "root", "-m", "64", "-c", "1024", "-l", "127.0.0.1,::1", "-o", "modern,drop_privileges"]

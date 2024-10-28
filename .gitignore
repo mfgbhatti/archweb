@@ -16,9 +16,10 @@ htmlcov
 **/**__pycache__
 
 .mypy_cache/
-
-# rope
+temp# rope
 .ropeproject/
+venv/
+.idea/
 
 # coverage
 .coverage

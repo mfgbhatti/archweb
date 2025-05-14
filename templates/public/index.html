@@ -46,7 +46,7 @@
         <a href="{{ news.get_absolute_url }}"
             title="View full article: {{ news.title }}">{{ news.title }}</a>
     </h4>
-    <p class="timestamp">{{ news.postdate|date }}</p>
+    <p class="timestamp">{{ news.postdate|date:"Y-m-d" }}</p>
     <div class="article-content">
         {% if forloop.counter0 == 0 %}{{ news.html|truncatewords_html:300 }}
         {% else %}{{ news.html|truncatewords_html:100 }}{% endif %}
@@ -59,7 +59,7 @@
     </h3>
     <dl class="newslist">
     {% endif %}
-        <dt>{{ news.postdate|date }}</dt>
+        <dt>{{ news.postdate|date:"Y-m-d" }}</dt>
         <dd>
             <a href="{{ news.get_absolute_url }}"
                 title="نیوز کا پورا مضمون: {{ news.title }}">{{ news.title }}</a>
@@ -127,8 +127,7 @@
 
     <h4>حمایت</h4>
     <ul>
-        <li><a href="{% url 'page-donate' %}" title="آرچ لینکس کو سپورٹ کریں">عطیہ کریں</a></li>
-        <li><a href="https://www.unixstickers.com/tag/archlinux" title="آرچ لینکس کے سٹیکرز، ٹی شرٹس، ہوڈیز، مگز، پوسٹرز اور پنز">یونی سٹیکرز سے اشیاء خریدیں</a></li>
+        <li><a href="{% url 'page-donate' %}" title="Help support Arch Linux">Donate</a></li>
         <li><a href="https://www.freewear.org/?page=list_items&amp;org=Archlinux"
             title="ٹی شرٹس">فری وئیرز سے ٹی شرٹس،</a></li>
         <li><a href="https://www.hellotux.com/arch"

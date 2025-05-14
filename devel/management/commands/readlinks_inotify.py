@@ -59,7 +59,7 @@ class Command(BaseCommand):
             arches = Arch.objects.filter(agnostic=False)
             repos = Repo.objects.all()
 
-        arch_path_map = {arch: None for arch in arches}
+        arch_path_map = dict.fromkeys(arches)
         all_paths = set()
         total_paths = 0
         for arch in arches:
@@ -89,7 +89,9 @@ class Command(BaseCommand):
         for name in all_paths:
             manager.add_watch(name, mask)
 
-        handler = EventHandler(arch_paths=arch_path_map, filename_suffix='.links.tar.gz', callback_func=wrapper_read_links)
+        handler = EventHandler(arch_paths=arch_path_map,
+                               filename_suffix='.links.tar.gz',
+                               callback_func=wrapper_read_links)
         return pyinotify.Notifier(manager, handler)
 
 
